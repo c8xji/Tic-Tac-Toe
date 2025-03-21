@@ -12,24 +12,34 @@
 </head>
 <body class="text-bg-secondary">
 <div class="container">
-    <div class="row">
-        <div class="col text-center fs-1 mt-3 title-area"><h1>Tic-Tac-Toe!</h1></div>
+    <div class="row title-area">
+        <div class="col text-center fs-1 mt-3">
+            <h1>Tic-Tac-Toe!</h1>
+            <h2>Who can be the winner?</h2>
+        </div>
     </div>
-    <div class="row game-area mb-5 pb-5">
+    <div class="row game-area mt-3 pt-3">
         <div class="col-3 pt-1">
-            <div class="col">
-            <button>
-                <div class="dropdown border-top">
-                    <a href="#" class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
-                      info
-                    </a>
-                    <ul class="dropdown-menu text-small shadow" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate3d(0px, -58px, 0px);" data-popper-placement="top-start">
-                      <li><div>how to play and rule...</div></li>
-                    </ul>
-                  </div>
-            </button></div>
-            <div class="col"><button>play again</button></div>
-            <div class="col"><button>reset</button></div>
+            <div id="button" class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                <div class="btn-group dropend" role="group">
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    HOW TO PLAY:
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                        <p class="dropdown-item">🎮 How to Play: <br>
+                        This is a classic Tic-Tac-Toe game. Two players take turns marking a ⭕ (O) or ❌ (X) on a 3×3 grid. The goal is to form a straight line (horizontally, vertically, or diagonally) with your symbol before your opponent does. If the board is full and no one has won, the game ends in a draw.
+                        </p>
+                        <p class="dropdown-item">🔄 Button Functions: <br>
+                            <span>NEW GAME:</span> Clears the board but keeps the current score, allowing players to start a new round. <br><br>
+                            <span>RESET:</span> Clears the board and resets all scores, restarting the game from scratch.
+                        </p>
+                    </li>
+                  </ul>
+                </div>
+                <button type="button" id="newGame" class="btn btn-primary">NEW GAME</button>
+                <button type="button" id="reset" class="btn btn-primary">RESET</button>
+              </div>
         </div>
         <div class="col-6 pt-1">
             <div class="grid-container">
@@ -45,8 +55,8 @@
             </div>
         </div>
         <div class="col-3 pt-1">
-            <div class="col">score1</div>
-            <div class="col">score2</div>
+            <div class="col score mb-2">O's score: <span class="scoreO">0</span></div>
+            <div class="col score">X's score: <span class="scoreX">0</span></div>
         </div>
     </div>
 </div>

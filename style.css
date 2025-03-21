@@ -3,14 +3,43 @@ body {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
+    height: 100vh;
 }
 
 h1 {
-    font-size: 20vh;
+    font-size: 6rem;
 }
 
+h2 {
+    font-size: 2rem;
+}
+
+.dropdown-item {
+    width: 50vw;
+    white-space: normal;
+}
+
+p > span {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.score {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#button {
+    display: flex;
+    justify-content: center;
+}
 .title-area {
     height: 20vh;
+}
+
+.btn-group-vertical .btn:nth-child(2) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 .game-area {
